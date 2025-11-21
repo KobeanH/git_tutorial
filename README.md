@@ -70,8 +70,8 @@ sequenceDiagram
     GAS->>EL: file_id を送信
     Note over GAS,EL: ペイロードのprovider_idは無視
 
-    EL->>SA: サービスアカウントで認証
-    SA->>Drive: files().get(fileId, fields='owners')
+    EL->>Drive: サービスアカウントで認証
+    EL->>Drive: files().get(fileId, fields='owners')
     Drive-->>SA: ファイルメタデータ
     Note over Drive,SA: owners: [{<br/>  emailAddress: "user@customer-a.com",<br/>  displayName: "User A"<br/>}]
 
