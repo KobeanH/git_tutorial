@@ -68,7 +68,6 @@ sequenceDiagram
     Note over Drive: 権限リスト:<br/>- user@customer-a.com (owner)<br/>- service-account@... (reader)
 
     GAS->>EL: file_id を送信
-    Note over GAS,EL: ペイロードのprovider_idは無視
 
     EL->>Drive: サービスアカウントを使用してファイルのオーナーを取得
     Drive->>EL: ファイル所有者情報を返す
@@ -80,5 +79,4 @@ sequenceDiagram
     API->>SB: 契約作成リクエスト
     SB-->>API: 契約作成完了
     API-->>EL: 成功レスポンス
-    EL-->>GAS: 成功レスポンス
 ```
